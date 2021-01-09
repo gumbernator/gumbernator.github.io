@@ -1,5 +1,7 @@
 import { MnistData } from './mnist_data.js';
 
+console.log('Hello world!');
+
 async function showExamples(data) {
     // Create a container in the visor
     const surface =
