@@ -4,12 +4,13 @@ class WinForm {
     width;
     height;
     iconPath;
+    titleBar;
 
     titleHeight = '3vh';
     titleMinWidth = '15vw';
     modifiersWidth = '2.4vw';
 
-    formBody;
+    form;
 
     constructor(params) {
         this.top = params.top;
@@ -21,6 +22,8 @@ class WinForm {
         if (params.iconPath) {
             this.titleBar = this.createTitleBar(params.iconPath);
         }
+
+        this.form = this.createForm();
     }
 
     createTitleBar(iconPath) {
@@ -66,7 +69,13 @@ class WinForm {
             },
             events: {
                 mouseenter: () => { cancelIcon.element.className = 'closeiconenterclass'; },
-                mouseleave: () => { cancelIcon.element.className = 'closeiconleaveclass'; }
+                mouseleave: () => { cancelIcon.element.className = 'closeiconleaveclass'; },
+                click: () => {
+                    this.titleBar.removeElement();
+                    this.form.removeElement();
+                    this.titleBar = null;
+                    this.form = null;
+                }
             }
         });
 
@@ -74,7 +83,7 @@ class WinForm {
             tag: 'div',
             styles: {
                 top: '0px',
-                right: `calc(1 * ${this.modifiersWidth})`,
+                rigth: '0px',
                 width: this.modifiersWidth,
                 height: this.titleHeight,
                 backgroundImage: 'url(./vector_graphics/expand-shrink.svg)',
@@ -86,6 +95,9 @@ class WinForm {
             events: {
                 mouseenter: () => { expandAndShrinkIcon.element.className = 'taskiconenterclass'; },
                 mouseleave: () => { expandAndShrinkIcon.element.className = 'taskiconleaveclass'; }
+            },
+            place: {
+                rightToLeftOf: cancelIcon
             }
         });
 
@@ -93,7 +105,7 @@ class WinForm {
             tag: 'div',
             styles: {
                 top: '0px',
-                right: `calc(2 * ${this.modifiersWidth})`,
+                rigth: '0px',
                 width: this.modifiersWidth,
                 height: this.titleHeight,
                 backgroundImage: 'url(./vector_graphics/minimize.svg)',
@@ -106,6 +118,9 @@ class WinForm {
                 mouseenter: () => { minimizeIcon.element.className = 'taskiconenterclass'; },
                 mouseleave: () => { minimizeIcon.element.className = 'taskiconleaveclass'; }
             },
+            place: {
+                rightToLeftOf: expandAndShrinkIcon
+            }
         });
 
         titlebar.addChildComponent(cancelIcon);
@@ -113,5 +128,25 @@ class WinForm {
         titlebar.addChildComponent(minimizeIcon);
 
         return titlebar;
+    }
+
+    createForm() {
+        let form = new Component({
+            tag: 'div',
+            styles: {
+                width: this.width,
+                height: this.height,
+                minWidth: this.titleMinWidth,
+                backgroundColor: 'grey',
+                userSelect: 'none'
+            },
+            place: {
+                topToBottomOf: this.titleBar,
+                leftToLeftOf: this.titleBar
+            }
+        });
+        this.titleBar.setDraggable(true, () => { form.reposition() })
+
+        return form;
     }
 }

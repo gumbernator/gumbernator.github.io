@@ -1,6 +1,6 @@
 let taskbar = new Taskbar();
 
-new WinForm({
+let form = new WinForm({
     top: '10vh',
     left: '50vw',
     width: '40vw',

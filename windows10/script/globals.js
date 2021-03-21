@@ -1,4 +1,5 @@
 const ALLCOMPONENTS = [];
+let Z_INDEX = 0;
 
 let systemTheme = {
     color: '#444'

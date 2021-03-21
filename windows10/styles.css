@@ -115,7 +115,7 @@ body {
         background-color: transparent;
     }
     to {
-        background-color: tomato;
+        background-color: crimson;
     }
 }
 
@@ -127,7 +127,7 @@ body {
 
 @keyframes closeIconLeaveAnimation {
     from {
-        background-color: tomato;
+        background-color: crimson;
     }
     to {
         background-color: transparent;
