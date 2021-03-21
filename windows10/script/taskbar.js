@@ -46,7 +46,7 @@ class Taskbar {
                 minHeight: this.taskbarMinHeight,
                 backdropFilter: 'blur(20px) brightness(20%) contrast(80%)',
                 userSelect: 'none',
-                zIndex: Z_INDEX++
+                zIndex: Z_INDEX_TASKBAR++
             }
         });
         return backPanel;
@@ -64,7 +64,7 @@ class Taskbar {
                 backgroundImage: `url("./vector_graphics/icons8-windows-10-start.svg")`,
                 backgroundSize: 'contain',
                 userSelect: 'none',
-                zIndex: Z_INDEX++
+                zIndex: Z_INDEX_TASKBAR++
             },
             place: {
                 leftToLeftOf: this.backPanel
@@ -89,7 +89,7 @@ class Taskbar {
                 backgroundColor: 'transparent',
                 borderLeft: '1px solid grey',
                 userSelect: 'none',
-                zIndex: Z_INDEX++
+                zIndex: Z_INDEX_TASKBAR++
             },
             place: {
                 rightToRightOf: this.backPanel
@@ -115,7 +115,7 @@ class Taskbar {
                 backgroundImage: `url(./vector_graphics/notification-filled.svg)`,
                 backgroundSize: 'contain',
                 userSelect: 'none',
-                zIndex: Z_INDEX++
+                zIndex: Z_INDEX_TASKBAR++
             },
             place: {
                 rightToLeftOf: this.desktopCorner
@@ -147,7 +147,7 @@ class Taskbar {
                 alignItems: 'center',
                 justifyContent: 'center',
                 userSelect: 'none',
-                zIndex: Z_INDEX++
+                zIndex: Z_INDEX_TASKBAR++
             },
             place: {
                 rightToLeftOf: this.notificationCenter
@@ -200,7 +200,7 @@ class Taskbar {
                 alignItems: 'center',
                 justifyContent: 'center',
                 userSelect: 'none',
-                zIndex: Z_INDEX++
+                zIndex: Z_INDEX_TASKBAR++
             },
             place: {
                 rightToLeftOf: this.calendarCenter
@@ -239,7 +239,7 @@ class Taskbar {
                 minHeight: this.taskbarMinHeight,
                 background: `url(./vector_graphics/chevron-up.svg) no-repeat center`,
                 userSelect: 'none',
-                zIndex: Z_INDEX++
+                zIndex: Z_INDEX_TASKBAR++
             },
             events: {
                 mouseenter: () => { systemTray.element.className = 'taskiconenterclass'; },
@@ -271,7 +271,8 @@ class Taskbar {
                 minHeight: this.taskbarMinHeight,
                 backgroundImage: `url(${iconPath})`,
                 backgroundSize: 'contain',
-                userSelect: 'none'
+                userSelect: 'none',
+                zIndex: Z_INDEX_TASKBAR++
             },
             place: {
                 leftToRightOf: leftSideItem

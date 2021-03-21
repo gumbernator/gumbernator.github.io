@@ -1,13 +1,15 @@
 const ALLCOMPONENTS = [];
-let Z_INDEX = 0;
+let Z_INDEX_TASKBAR = 1000;
+let WINFORMS = [];
 
 let systemTheme = {
-    color: '#444'
+    titleBarColor: '#2B2B2B',
+    titleBarActiveColor: '#757575'
 };
 
-window.onresize = (e) => {
+window.addEventListener('resize', () => {
     let componentCount = ALLCOMPONENTS.length;
     for (let i = 0; i < componentCount; i++) {
         ALLCOMPONENTS[i].reposition();
     }
-}
+});
