@@ -44,7 +44,7 @@ class Taskbar {
                 width: '100vw',
                 height: this.taskbarHeight,
                 minHeight: this.taskbarMinHeight,
-                backdropFilter: 'blur(20px) brightness(20%) contrast(80%)',
+                backgroundColor: 'hsla(360, 0%, 0%, 0.8)',
                 userSelect: 'none',
                 zIndex: Z_INDEX_TASKBAR++
             }

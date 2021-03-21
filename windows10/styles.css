@@ -49,11 +49,11 @@ body {
 @keyframes startMouseEnterAnimation {
     from {
         background-image: url('./vector_graphics/icons8-windows-10-start.svg');
-        backdrop-filter: none;
+        background-color: transparent;
     }
     to {
         background-image: url('./vector_graphics/icons8-windows-10-start-active.svg');
-        backdrop-filter: contrast(80%);
+        background-color: hsla(0, 0%, 80%, .2);
     }
 }
 
@@ -66,11 +66,11 @@ body {
 @keyframes startMouseLeaveAnimation {
     from {
         background-image: url('./vector_graphics/icons8-windows-10-start-active.svg');
-        backdrop-filter: contrast(80%);
+        background-color: hsla(0, 0%, 80%, .2);
     }
     to {
         background-image: url('./vector_graphics/icons8-windows-10-start.svg');
-        backdrop-filter: none;
+        background-color: transparent;
     }
 }
 
@@ -82,10 +82,10 @@ body {
 
 @keyframes taskIconMouseEnterAnimation {
     from {
-        backdrop-filter: none;
+        background-color: transparent;
     }
     to {
-        backdrop-filter: contrast(80%);
+        background-color: hsla(0, 0%, 80%, .2);
     }
 }
 
@@ -97,10 +97,10 @@ body {
 
 @keyframes taskIconMouseLeaveAnimation {
     from {
-        backdrop-filter: contrast(80%);
+        background-color: hsla(0, 0%, 80%, 0.2);
     }
     to {
-        backdrop-filter: none;
+        background-color: transparent;
     }
 }
 
