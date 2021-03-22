@@ -92,6 +92,27 @@ class Component {
         }
     }
 
+    setStyle(params) {
+        for (const [key, value] of Object.entries(params)) {
+            this.styles[key] = value;
+            this.element.style[key] = value;
+        }
+    }
+
+    setProperties(params) {
+        for (const [key, value] of Object.entries(params)) {
+            this.properties[key] = value;
+            this.element[key] = value;
+        }
+    }
+
+    setPlacement(params) {
+        for (const [key, value] of Object.entries(params)) {
+            this.placement[key] = value;
+            this.reposition();
+        }
+    }
+
     setDraggable(isDraggable, onDrag) {
         let pos1 = 0,
             pos2 = 0,

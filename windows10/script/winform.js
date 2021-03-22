@@ -7,6 +7,7 @@ class WinForm {
 
     titleHeight = '3vh';
     titleMinWidth = '15vw';
+    formMinHeight = '10vh';
     modifiersWidth = '2.4vw';
 
     titleBar;
@@ -167,11 +168,14 @@ class WinForm {
                 width: this.width,
                 height: this.height,
                 minWidth: this.titleMinWidth,
+                minHeight: this.formMinHeight,
                 backgroundColor: '#191919',
                 userSelect: 'none',
                 zIndex: this.winformsIndex,
                 border: 'solid 1px ' + systemTheme.titleBarColor,
-                boxSizing: 'border-box'
+                boxSizing: 'border-box',
+                resize: 'both',
+                overflow: 'auto'
             },
             place: {
                 topToBottomOf: this.titleBar,
@@ -187,6 +191,16 @@ class WinForm {
         });
 
         return form;
+    }
+
+    alignSizeWithForm() {
+        let _width = this.form.element.style.width.replace('px', '');
+        let _height = this.form.element.style.height.replace('px', '');
+        if (this.titleBar) {
+            this.titleBar.setStyle({ width: ((_width / window.innerWidth) * 100) + 'vw' });
+        }
+        this.form.setStyle({ width: _width });
+        this.form.setStyle({ height: _height });
     }
 
     set zIndex(idx) {

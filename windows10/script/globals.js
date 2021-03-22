@@ -13,3 +13,13 @@ window.addEventListener('resize', () => {
         ALLCOMPONENTS[i].reposition();
     }
 });
+
+/**
+ * To syncronize titlebar width with form size
+ */
+setInterval(() => {
+    let formsLength = WINFORMS.length;
+    for (let i = 0; i < formsLength; i++) {
+        WINFORMS[i].alignSizeWithForm();
+    }
+}, 1);
