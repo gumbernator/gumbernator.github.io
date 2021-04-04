@@ -1,0 +1,24 @@
+:root {
+    --system-color-1: #2B2B2B;
+    --system-color-2: #757575;
+    --system-color-3: #424242;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.wallpaper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    user-select: none;
+    z-index: 0;
+}

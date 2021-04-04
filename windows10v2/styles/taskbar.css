@@ -1,0 +1,206 @@
+.preload * {
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -ms-transition: none !important;
+    -o-transition: none !important;
+    transition: none !important;
+}
+
+.taskbar {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: auto;
+    height: 4vh;
+    min-height: 30px;
+    background-color: hsla(360, 0%, 0%, 0.85);
+    z-index: 999;
+}
+
+.startButton {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 4.5vh;
+    background-image: url(../vectors/icons8-windows-10-start.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    user-select: none;
+    transition: 100ms;
+    transition-property: background-color, background-image;
+    z-index: 999;
+}
+
+.startButton:hover {
+    background-image: url(../vectors/icons8-windows-10-start-active.svg);
+    background-color: hsla(0, 0%, 80%, .1);
+}
+
+.desktopCorner {
+    position: absolute;
+    right: 0;
+    height: 100%;
+    width: 4px;
+    border-left: solid 1px var(--system-color-2);
+    z-index: 999;
+}
+
+.desktopCorner:hover {
+    background-color: hsla(0, 0%, 80%, .1);
+}
+
+.notificationCenter {
+    position: absolute;
+    right: 12px;
+    height: 100%;
+    width: 4vh;
+    min-width: 35px;
+    background-image: url(../vectors/notification-empty.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    user-select: none;
+    transition: 100ms;
+    transition-property: background-color;
+    z-index: 999;
+}
+
+.notificationCenter:hover {
+    background-color: hsla(0, 0%, 80%, .1);
+}
+
+.dateControl {
+    position: absolute;
+    right: calc(13px + max(30px, 4vh));
+    height: 100%;
+    width: 6.5vh;
+    min-width: 45px;
+    display: grid;
+    text-align: center;
+    color: white;
+    font-size: calc(0.4vw + 0.5vh);
+    font-family: SegoeUI;
+    user-select: none;
+    z-index: 999;
+}
+
+.dateControl:hover {
+    background-color: hsla(0, 0%, 80%, .1);
+}
+
+.dateControlTime {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dateControlDate {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.5vh;
+}
+
+.languagePicker {
+    position: absolute;
+    right: calc(14px + max(30px, 4vh) + max(6.5vh, 45px));
+    height: 100%;
+    width: 3.5vh;
+    min-width: 25px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    z-index: 999;
+}
+
+.languagePicker:hover {
+    background-color: hsla(0, 0%, 80%, .1);
+}
+
+.languagePicker>div {
+    padding-bottom: 0.2vh;
+    font-size: calc(0.4vw + 0.55vh);
+    font-family: SegoeUI;
+}
+
+.systemTray {
+    position: absolute;
+    right: calc(15px + max(30px, 4vh) + max(6.5vh, 45px) + max(25px, 3.5vh));
+    width: 2.5vh;
+    min-width: 20px;
+    height: 100%;
+    background: url(../vectors/chevron-up.svg) no-repeat center;
+    background-size: auto 40%;
+    z-index: 999;
+}
+
+.systemTray:hover {
+    background-color: hsla(0, 0%, 80%, .1);
+}
+
+.taskbarItemUnopened {
+    background-color: transparent;
+    transition: 100ms;
+    transition-property: background-color;
+}
+
+.taskbarItemUnopened>div {
+    background: transparent;
+}
+
+.taskbarItemUnopened:hover {
+    background-color: hsla(0, 0%, 80%, .1);
+}
+
+.taskbarItemOpened {
+    background-color: transparent;
+    transition: 100ms;
+    transition-property: background-color;
+}
+
+.taskbarItemOpened>div {
+    position: absolute;
+    bottom: 0;
+    left: 7%;
+    right: 7%;
+    width: auto;
+    height: 0.2vh;
+    min-height: 3px;
+    background-color: var(--system-color-2);
+    transition: 100ms;
+}
+
+.taskbarItemOpened:hover {
+    background-color: hsla(0, 0%, 80%, .1);
+}
+
+.taskbarItemOpened:hover>div {
+    left: 0;
+    right: 0;
+}
+
+.taskbarItemFocused {
+    background-color: hsla(0, 0%, 80%, .2);
+    transition: 100ms;
+    transition-property: background-color;
+}
+
+.taskbarItemFocused>div {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: auto;
+    height: 0.2vh;
+    min-height: 3px;
+    background-color: var(--system-color-2);
+}
+
+.taskbarItemFocused:hover {
+    background-color: hsla(0, 0%, 80%, .3);
+}

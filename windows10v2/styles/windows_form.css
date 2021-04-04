@@ -1,0 +1,31 @@
+.closeButton:hover {
+    background-color: crimson;
+}
+
+.shrinkAndExpandButton:hover {
+    background-color: hsla(0, 0%, 80%, .1);
+}
+
+.minimizeButton:hover {
+    background-color: hsla(0, 0%, 80%, .1);
+}
+
+.minimizeWindow_0 {
+    animation-name: minimizeWindowAnimation_0;
+    animation-duration: 250ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes minimizeWindowAnimation_0 {
+    from {
+        opacity: 0.5;
+    }
+    to {
+        top: 95vh;
+        left: 4.5vh;
+        width: 4.5vh;
+        min-width: 4.5vh;
+        height: 4.5vh;
+        opacity: 0;
+    }
+}
