@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./styles/font.css">
     <link rel="stylesheet" href="./styles/globals.css">
     <link rel="stylesheet" href="./styles/taskbar.css">
+    <link rel="stylesheet" href="./styles/taskbar_panels.css">
     <link rel="stylesheet" href="./styles/windows_form.css">
     <!-- <link rel="stylesheet" href="./styles/main.css"> -->
 </head>
@@ -30,12 +31,219 @@
         </div>
         <div id="_systemTray" class="systemTray"></div>
     </div>
+    <div id="_systemTrayPanel" class="systemTrayPanel"></div>
+    <div id="_languagePickerPanel" style="visibility: hidden;">
+        <div id="_languagePickerOptionEN" class="languagePickerOptionEN">
+            <div class="languagePickerOptionLeft">ENG</div>
+            <div class="languagePickerOptionRight">English (United States)</br>US Keyboard</div>
+        </div>
+        <div id="_languagePickerOptionMN" class="languagePickerOptionMN">
+            <div class="languagePickerOptionLeft">МОН</div>
+            <div class="languagePickerOptionRight">Mongolian</br>Buuz (Mongolian)</div>
+        </div>
+    </div>
+    <div id="_calendarPanel" style="visibility: hidden;">
+        <div id="_calendarPanelUpper" class="calendarPanelUpper">
+            <div id="_calendarPanelUpperTimer" class="calendarPanelUpperTimer">
+                <div id="_calendarPanelUpperTimerText"></div>
+            </div>
+            <div id="_calendarPanelUpperHourType" class="calendarPanelUpperHourType">
+                <div id="_calendarPanelUpperHourTypeText"></div>
+            </div>
+            <div id="_calendarPanelUpperDate" class="calendarPanelUpperDate">
+                <div id="_calendarPanelUpperDateText"></div>
+            </div>
+        </div>
+        <div id="_calendarPanelLower" class="calendarPanelLower">
+            <div id="_calendarPanelLowerMonthYear" class="calendarPanelLowerMonthYear">
+                <div id="_calendarPanelLowerMonthYearText"></div>
+            </div>
+            <div id="_calendarPanelLowerWeekDays" class="calendarPanelLowerWeekDays">
+                <div id="_calendarPanelSunday"></div>
+                <div id="_calendarPanelMonday"></div>
+                <div id="_calendarPanelTuesday"></div>
+                <div id="_calendarPanelWednesday"></div>
+                <div id="_calendarPanelThursday"></div>
+                <div id="_calendarPanelFriday"></div>
+                <div id="_calendarPanelSaturday"></div>
+            </div>
+            <div id="_calendarPanelLowerDays" class="calendarPanelLowerDays">
+                <div>
+                    <div>
+                        <div id="_calendarDays11">11</div>
+                    </div>
+                    <div>
+                        <div id="_calendarDays12">12</div>
+                    </div>
+                    <div>
+                        <div id="_calendarDays13">13</div>
+                    </div>
+                    <div>
+                        <div id="_calendarDays14">14</div>
+                    </div>
+                    <div>
+                        <div id="_calendarDays15">15</div>
+                    </div>
+                    <div>
+                        <div id="_calendarDays16">16</div>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <div id="_calendarDays21">21</div>
+                    </div>
+                    <div>
+                        <div id="_calendarDays22">22</div>
+                    </div>
+                    <div>
+                        <div id="_calendarDays23">23</div>
+                    </div>
+                    <div>
+                        <div id="_calendarDays24">24</div>
+                    </div>
+                    <div>
+                        <div id="_calendarDays25">25</div>
+                    </div>
+                    <div>
+                        <div id="_calendarDays26">26</div>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <div id="_calendarDays31">31</div>
+                    </div>
+                    <div>
+                        <div id="_calendarDays32">32</div>
+                    </div>
+                    <div>
+                        <div id="_calendarDays33">33</div>
+                    </div>
+                    <div>
+                        <div id="_calendarDays34">34</div>
+                    </div>
+                    <div>
+                        <div id="_calendarDays35">35</div>
+                    </div>
+                    <div>
+                        <div id="_calendarDays36">36</div>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <div id="_calendarDays41">41</div>
+                    </div>
+                    <div>
+                        <div id="_calendarDays42">42</div>
+                    </div>
+                    <div>
+                        <div id="_calendarDays43">43</div>
+                    </div>
+                    <div>
+                        <div id="_calendarDays44">44</div>
+                    </div>
+                    <div>
+                        <div id="_calendarDays45">45</div>
+                    </div>
+                    <div>
+                        <div id="_calendarDays46">46</div>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <div id="_calendarDays51">51</div>
+                    </div>
+                    <div>
+                        <div id="_calendarDays52">52</div>
+                    </div>
+                    <div>
+                        <div id="_calendarDays53">53</div>
+                    </div>
+                    <div>
+                        <div id="_calendarDays54">54</div>
+                    </div>
+                    <div>
+                        <div id="_calendarDays55">55</div>
+                    </div>
+                    <div>
+                        <div id="_calendarDays56">56</div>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <div id="_calendarDays61">61</div>
+                    </div>
+                    <div>
+                        <div id="_calendarDays62">62</div>
+                    </div>
+                    <div>
+                        <div id="_calendarDays63">63</div>
+                    </div>
+                    <div>
+                        <div id="_calendarDays64">64</div>
+                    </div>
+                    <div>
+                        <div id="_calendarDays65">65</div>
+                    </div>
+                    <div>
+                        <div id="_calendarDays66">66</div>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <div id="_calendarDays71">71</div>
+                    </div>
+                    <div>
+                        <div id="_calendarDays72">72</div>
+                    </div>
+                    <div>
+                        <div id="_calendarDays73">73</div>
+                    </div>
+                    <div>
+                        <div id="_calendarDays74">74</div>
+                    </div>
+                    <div>
+                        <div id="_calendarDays75">75</div>
+                    </div>
+                    <div>
+                        <div id="_calendarDays76">76</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="_notificationPanel" style="visibility: hidden;">
+        <div id="_notificationPanelNoNotiMessage" class="notificationPanelNoNotiMessage">No new notifications</div>
+        <div id="_notificationPanelLocation" class="notificationPanelLocation">
+            <div id="_notificationPanelLocationIcon" class="notificationPanelLocationIcon"></div>
+            <div id="_notificationPanelLocationText" class="notificationPanelCardText">Location</div>
+        </div>
+        <div id="_notificationPanelNightLight" class="notificationPanelNightLight">
+            <div id="_notificationPanelNightLightIcon" class="notificationPanelNightLightIcon"></div>
+            <div id="_notificationPanelNightLightText" class="notificationPanelCardText">Night light</div>
+        </div>
+        <div id="_notificationPanelScreenSnip" class="notificationPanelScreenSnip">
+            <div id="_notificationPanelScreenSnipIcon" class="notificationPanelScreenSnipIcon"></div>
+            <div id="_notificationPanelScreenSnipText" class="notificationPanelCardText">Screen snip</div>
+        </div>
+        <div id="_notificationPanelNetwork" class="notificationPanelNetwork">
+            <div id="_notificationPanelNetworkIcon" class="notificationPanelNetworkIcon"></div>
+            <div id="_notificationPanelNetworkText" class="notificationPanelCardText">Network</div>
+        </div>
+    </div>
 
     <script src="./scripts/globals.js"></script>
+
+    <script src="./scripts/languages/eng.js"></script>
+    <script src="./scripts/languages/mgl.js"></script>
+
     <script src="./scripts/component.js"></script>
-    <script src="./scripts/windows/windows_form.js"></script>
-    <script src="./scripts/windows/file_explorer.js"></script>
-    <script src="./scripts/taskbar_item.js"></script>
+
+    <script src="./scripts/windows_forms/windows_form.js"></script>
+    <script src="./scripts/windows_forms/file_explorer.js"></script>
+
+    <script src="./scripts/taskbar/taskbar_item.js"></script>
+    <script src="./scripts/taskbar/taskbar_elements.js"></script>
+
     <script src="./scripts/index.js"></script>
 </body>
 

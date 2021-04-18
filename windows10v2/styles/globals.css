@@ -1,7 +1,9 @@
 :root {
+    --taskbar-height: max(4vh, 30px);
     --system-color-1: #2B2B2B;
     --system-color-2: #757575;
     --system-color-3: #424242;
+    --system-color-4: #b1b1b1;
 }
 
 body {

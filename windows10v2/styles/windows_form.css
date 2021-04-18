@@ -1,3 +1,8 @@
+.haveTransition {
+    transition: 100ms;
+    transition-property: left, top, width, height;
+}
+
 .closeButton:hover {
     background-color: crimson;
 }
@@ -10,19 +15,19 @@
     background-color: hsla(0, 0%, 80%, .1);
 }
 
-.minimizeWindow_0 {
-    animation-name: minimizeWindowAnimation_0;
-    animation-duration: 250ms;
+.minimizeWindow {
+    animation-name: minimizeWindowAnimation;
+    animation-duration: 400ms;
     animation-fill-mode: forwards;
 }
 
-@keyframes minimizeWindowAnimation_0 {
+@keyframes minimizeWindowAnimation {
     from {
-        opacity: 0.5;
+        opacity: 0.75;
     }
     to {
         top: 95vh;
-        left: 4.5vh;
+        left: calc(4.5vh * var(--pinned-position));
         width: 4.5vh;
         min-width: 4.5vh;
         height: 4.5vh;
